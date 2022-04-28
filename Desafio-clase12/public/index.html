@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Productos</title>
 </head>
 
@@ -50,6 +53,32 @@
     <div class="container mt-3">
         <div id="tableContainer" class="jumbotron">
             <!-- Para renderizar la tabla de productos -->
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="jumbotron">
+            <h2 class="h2">Chat online.</h2>
+            <form id="newMessageForm" action="" method="POST">
+
+                <div class="form-group">
+                    <label for="user"><b>Su mail:</b></label>
+                    <input id="user" class="form-control" type="email" name="user" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="msg"><b>Mensaje:</b></label>
+                    <input id="msg" class="form-control" type="text" name="msg" required>
+                </div>
+
+                <button class="btn btn-success mt-3 mb-5">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div id="chatContainer" class="jumbotron">
+            <!-- Para renderizar el chat entre clientes -->
         </div>
     </div>
 

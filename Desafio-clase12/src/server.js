@@ -11,6 +11,7 @@ const httpServer = new HttpServer(app);
 const io = new Socket(httpServer);
 
 const products = new Contenedor();
+const messages = [];
 
 //--------------------------------------------
 // configuro el socket
@@ -23,6 +24,14 @@ io.on('connection', socket => {
         console.log("El Servidor recibió un nuevo producto.")
         products.save(product);
         io.sockets.emit('showProducts', products.getAll());
+    });
+
+    socket.emit('showChat', messages);
+    
+    socket.on('updateChat', msg => {
+        console.log("El Servidor recibió un nuevo mensaje en el chat.")
+        messages.push(msg);
+        io.sockets.emit('showChat', messages);
     });
 });
 
