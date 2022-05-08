@@ -4,7 +4,7 @@ const { Contenedor } = require('./contenedor');
 const app = express();
 const PORT = 8080;
 
-const archivoProductos = new Contenedor('productos.txt');
+const archivoProductos = new Contenedor('./data/prfs.txt');
 
 app.get('/', (req, res) => {
     res.send('Ruta inválida (por ahora...)');
