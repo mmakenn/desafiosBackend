@@ -1,0 +1,17 @@
+<div class="table-responsive">
+    <table class="table table-secondary">
+        {{#each messages}}
+            <tr>
+                <td class="w-25 user">
+                    {{user}}
+                </td>
+                <td class="w-25 dateMsg">
+                    {{date}}
+                </td>
+                <td class="msg">
+                    {{text}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
