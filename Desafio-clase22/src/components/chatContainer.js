@@ -1,45 +1,34 @@
-import knex from 'knex';
+import mongoose from "mongoose";
+import { mongoDB } from './database/options.js';
+
+await mongoose.connect(mongoDB.urlServer, mongoDB.options)
+
+const schema = new mongoose.Schema({ 
+    author: {
+        id: { type: String, required: true }, 
+        nombre: { type: String, required: true }, 
+        apellido: { type: String, required: true }, 
+        edad: { type: Number, required: true }, 
+        alias: { type: String },
+        avatar: { type: String }
+    },
+    date: { type: String, required: true },
+    text: { type: String, required: true }
+});
 
 class ChatContainer {
-    constructor(tableName, config){
-        this.knex = knex(config);
-        this.name = tableName;
-    }
-
-    //Tabla con los campos de los mensajes del chat.
-    async newTable() {
-        try {
-            const exists = await this.knex.schema.hasTable(this.name);
-            if (!exists) {
-                await this.knex.schema.createTable(this.name, table => {
-                    table.increments('id'),
-                    table.string('user'),
-                    table.string('text'),
-                    table.string('date')
-                });
-                console.log(`Table ${this.name} created.`);
-            } else {
-                console.log(`Table ${this.name} already exists.`);
-            }
-        }
-        catch(err) {
-            console.error(err);
-        }
+    constructor(){
+        this.collection = mongoose.model("chat", schema);
     }
 
     async getAll() {
-        try {
-            const rows = await this.knex.from(this.name).select("*");
-            return rows;
-        }
-        catch(err) {
-            console.error(err);
-        }
+        const all = await this.collection.find({});
+        return all;
     }
 
     async save(message) {
         try {
-            await this.knex(this.name).insert(message);
+            const info = await this.collection.create(message);
             console.log('Message saved');
         }
         catch(err) {
@@ -47,8 +36,8 @@ class ChatContainer {
         }
     }
 
-    close(){
-        this.knex.destroy();
+    async close(){
+        await mongoose.disconnect();
     }
 }
 

@@ -4,9 +4,8 @@ import { Server as HttpServer } from 'http';
 import { Server as Socket } from 'socket.io';
 
 import { ChatContainer } from './components/chatContainer.js';
-import { sqlite3DB as chatDB } from './components/sqlOptions.js';
 import { ProductsContainer } from './components/productsContainer.js';
-import { mariaDB as productsDB } from './components/sqlOptions.js';
+import { mariaDB as productsDB } from './components/database/options.js';
 
 const app = express();
 const httpServer = new HttpServer(app);
@@ -14,14 +13,33 @@ const io = new Socket(httpServer);
 
 const products = new ProductsContainer("products1", productsDB);
 products.newTable();
-const chat = new ChatContainer("chat1", chatDB);
-chat.newTable();
+const chat = new ChatContainer();
 
 //--------------------------------------------
 // agrego middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
+//--------------------------------------------
+// Test de productos con Faker
+import { faker } from '@faker-js/faker';
+faker.locale = 'es';
+app.get('/api/productos-test', (req, res) => {
+    const productsTest = [];
+    for (let i = 0; i < 5; i++){
+        productsTest.push(
+            {
+                title: faker.commerce.product(),
+                price: faker.commerce.price(),
+                thumbnail: faker.image.image(),
+                stock: faker.random.numeric()
+            }
+        )
+    }
+    res.render('productList', { headers: [{title: "Producto"}, {title: "Precio"}, {title: "Imagen"}, {title: "Stock"}],
+                                products: productsTest, productsExists: true});
+});
 
 //--------------------------------------------
 // agrego Handlebars

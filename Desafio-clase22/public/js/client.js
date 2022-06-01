@@ -46,12 +46,21 @@ newMessageForm.addEventListener('submit', e => {
     console.log("El cliente envio un mensaje.");
     e.preventDefault()
 
-    const message = {
-        user: document.getElementById('user').value,
-        date: new Date().toLocaleString(),
+    const birthday = document.getElementById('birthday').value;
+    const today = new Date();
+    const message = { 
+        author: {
+            id: document.getElementById('user').value, 
+            nombre: document.getElementById('name').value, 
+            apellido: document.getElementById('lastname').value, 
+            edad: today.getFullYear() - parseInt(birthday.slice(0, 4)), 
+            alias: document.getElementById('nickname').value,
+            avatar: document.getElementById('avatar').value
+        },
+        date: today.toLocaleString(),
         text: document.getElementById('msg').value
     }
-
+    
     socket.emit('updateChat', message);
 })
 
