@@ -5,7 +5,11 @@ mongoose.connect(mongoDB.urlServer, mongoDB.options);
 /* Normalizacion de los mensajes para ser almacenados en la base de datos. */
 import { normalize, schema, denormalize } from "normalizr";
 const messageSchemaEntity = new schema.Entity('message');
-const authorsSchemaEntity = new schema.Entity('authors', {messages: [messageSchemaEntity]});
+const authorsSchemaEntity = new schema.Entity('authors')
+const chatSchemaEntity = new schema.Entity('chat', { 
+    authors: authorsSchemaEntity,
+    messages: [messageSchemaEntity]
+});
 
 import util from "util";
 function print(objeto) {
@@ -15,8 +19,8 @@ function print(objeto) {
 
 const chatSchema = new mongoose.Schema(
     {
-        entities: Object, 
-        result: String
+        entities: { type: Object, required: true }, 
+        result: { type: String, required: true }
     }
 );
 
@@ -32,14 +36,16 @@ class ChatContainer {
 
     async save(message) {
         try {
-            const saved = await this.getAll();
+            const fromServer = await this.getAll();
             let normalizedMsg;
-            if (saved == []){
-                normalizedMsg = normalize(message, authorsSchemaEntity);
+            if (fromServer.length == 0){
+                normalizedMsg = normalize(message, chatSchemaEntity);
+                console.log('## - NEW normalizedMsg:');
                 print(normalizedMsg);
             } else {
-                const savedDesnormalized = denormalize(saved.result, authorsSchemaEntity, saved.entities);
-                console.log(savedDesnormalized);
+                const fromServerDesnormalized = denormalize(fromServer[0].result, chatSchemaEntity, fromServer[0].entities);
+                console.log('## - fromServerDesnormalized:');
+                console.log(fromServerDesnormalized);
             }
             await this.collection.create(normalizedMsg);
             /* console.log('Message saved');
