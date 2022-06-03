@@ -1,24 +1,28 @@
 import mongoose from "mongoose";
 import { mongoDB } from './database/options.js';
+mongoose.connect(mongoDB.urlServer, mongoDB.options);
 
-await mongoose.connect(mongoDB.urlServer, mongoDB.options)
+/* Normalizacion de los mensajes para ser almacenados en la base de datos. */
+import { normalize, schema, denormalize } from "normalizr";
+const messageSchemaEntity = new schema.Entity('message');
+const authorsSchemaEntity = new schema.Entity('authors', {messages: [messageSchemaEntity]});
 
-const schema = new mongoose.Schema({ 
-    author: {
-        id: { type: String, required: true }, 
-        nombre: { type: String, required: true }, 
-        apellido: { type: String, required: true }, 
-        edad: { type: Number, required: true }, 
-        alias: { type: String },
-        avatar: { type: String }
-    },
-    date: { type: String, required: true },
-    text: { type: String, required: true }
-});
+import util from "util";
+function print(objeto) {
+  console.log(util.inspect(objeto, false, 12, true))
+}
+
+
+const chatSchema = new mongoose.Schema(
+    {
+        entities: Object, 
+        result: String
+    }
+);
 
 class ChatContainer {
     constructor(){
-        this.collection = mongoose.model("chat", schema);
+        this.collection = mongoose.model("chat", chatSchema);
     }
 
     async getAll() {
@@ -28,8 +32,18 @@ class ChatContainer {
 
     async save(message) {
         try {
-            const info = await this.collection.create(message);
-            console.log('Message saved');
+            const saved = await this.getAll();
+            let normalizedMsg;
+            if (saved == []){
+                normalizedMsg = normalize(message, authorsSchemaEntity);
+                print(normalizedMsg);
+            } else {
+                const savedDesnormalized = denormalize(saved.result, authorsSchemaEntity, saved.entities);
+                console.log(savedDesnormalized);
+            }
+            await this.collection.create(normalizedMsg);
+            /* console.log('Message saved');
+             */
         }
         catch(err) {
             console.error(err);

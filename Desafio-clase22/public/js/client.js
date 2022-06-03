@@ -41,6 +41,7 @@ async function showProducts(products) {
 
 //--------------------------------------------
 // Manejadores del formulario de ingreso del mensaje al chat.
+let idMsg = 1
 const newMessageForm = document.getElementById('newMessageForm')
 newMessageForm.addEventListener('submit', e => {
     console.log("El cliente envio un mensaje.");
@@ -49,6 +50,7 @@ newMessageForm.addEventListener('submit', e => {
     const birthday = document.getElementById('birthday').value;
     const today = new Date();
     const message = { 
+        id: String(idMsg),
         author: {
             id: document.getElementById('user').value, 
             nombre: document.getElementById('name').value, 
@@ -61,6 +63,7 @@ newMessageForm.addEventListener('submit', e => {
         text: document.getElementById('msg').value
     }
     
+    idMsg++; 
     socket.emit('updateChat', message);
 })
 
