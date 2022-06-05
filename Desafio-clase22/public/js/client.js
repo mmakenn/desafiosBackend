@@ -39,9 +39,15 @@ async function showProducts(products) {
     document.getElementById('tableContainer').innerHTML = html;
 }
 
+/* ------------------------ CHAT ------------------------ */
+
+/* Normalizacion de los mensajes para ser almacenados en la base de datos. */
+const authorSchemaEntity = new normalizr.schema.Entity('author');
+const messageSchemaEntity = new normalizr.schema.Entity('message', {author: authorSchemaEntity});
+const chatSchemaEntity = new normalizr.schema.Entity('chat', {chat: [messageSchemaEntity]});
+
 //--------------------------------------------
 // Manejadores del formulario de ingreso del mensaje al chat.
-let idMsg = 1
 const newMessageForm = document.getElementById('newMessageForm')
 newMessageForm.addEventListener('submit', e => {
     console.log("El cliente envio un mensaje.");
@@ -50,7 +56,6 @@ newMessageForm.addEventListener('submit', e => {
     const birthday = document.getElementById('birthday').value;
     const today = new Date();
     const message = { 
-        id: String(idMsg),
         author: {
             id: document.getElementById('user').value, 
             nombre: document.getElementById('name').value, 
@@ -62,8 +67,7 @@ newMessageForm.addEventListener('submit', e => {
         date: today.toLocaleString(),
         text: document.getElementById('msg').value
     }
-    
-    idMsg++; 
+
     socket.emit('updateChat', message);
 })
 
@@ -73,9 +77,19 @@ socket.on('showChat', showChat);
 
 async function showChat(messages) {
     console.log("Se actualiza el chat.");
+    const messagesJSON = normalizr.denormalize(messages[0].result, chatSchemaEntity, messages[0].entities);
     const template = await fetch('templates/chat.hbs');
     const textTemplate = await template.text();
     const functionTemplate = Handlebars.compile(textTemplate);
-    const html = functionTemplate({ messages: messages });
+    const html = functionTemplate({ messages: messagesJSON.chat });
+    console.log(messagesJSON.chat);
     document.getElementById('chatContainer').innerHTML = html;
+
+
+    const lengthNormalized = JSON.stringify(messages).length
+    const lengthDesnormalized = JSON.stringify(messagesJSON).length
+    const compression = lengthNormalized / lengthDesnormalized * 100;
+    console.log(lengthDesnormalized + " " + lengthNormalized);
+    const textCompresion = `<p> Text compression: ${compression}% </p>`
+    document.getElementById('compressionContainer').innerHTML = textCompresion;
 }
