@@ -21,3 +21,10 @@ export const mongoDB = {
         useUnifiedTopology: true 
     }
 }
+
+export const handlebarsConfig = {
+    extname: '.hbs',
+    defaultLayout: 'index.hbs'
+}
+
+export const admitedPassword = 'myClass24';
