@@ -1,0 +1,111 @@
+{{!-- Saludo al usuario --}}
+<div class="container mt-3">
+    <div class="jumbotron d-flex justify-content-around">
+        <p class="h2">¡Hola, {{user}}!</p>
+        <button class="btn btn-success mt-3 mb-5">
+            <a href="/logout" class="text-body"> Logout </a>
+        </button>
+    </div>
+</div>
+
+{{!-- ============================================================================ --}}
+
+{{!-- PRODUCTOS --}}
+<div class="container mt-3">
+    <div class="jumbotron">
+        <h2 class="h2">Ingrese nuevo producto.</h2>
+        <form id="newProductForm">
+            <div class="form-group">
+                <label for="title"><b>Producto:</b></label>
+                <input id="title" class="form-control" type="text" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price"><b>Precio:</b></label>
+                <input id="price" class="form-control" type="number" step="0.01" name="price" required>
+            </div>
+
+            <div class="form-group">
+            <label for="thumbnail"><b>URL Imagen:</b></label>
+            <input id="thumbnail" class="form-control" type="text" name="thumbnail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price"><b>Stock:</b></label>
+                <input id="price" class="form-control" type="number" name="stock" required>
+            </div>
+
+            <button class="btn btn-success mt-3 mb-5">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div id="tableContainer" class="jumbotron">
+        <!-- Para renderizar la tabla de productos -->
+    </div>
+</div>
+
+{{!-- ============================================================================ --}}
+
+{{!-- CHAT --}}
+<div class="container mt-3">
+    <div class="jumbotron">
+        <h2 class="h2">Chat online.</h2>
+        <form id="newMessageForm" action="" method="POST">
+
+            <div class="form-group">
+                <label for="user"><b>Su mail:</b></label>
+                <input id="user" class="form-control" type="email" name="user" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name"><b>Nombre:</b></label>
+                <input id="name" class="form-control" type="text" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname"><b>Apellido:</b></label>
+                <input id="lastname" class="form-control" type="text" name="lastname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nickname"><b>Alias:</b></label>
+                <input id="nickname" class="form-control" type="text" name="nickname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="avatar"><b>Avatar:</b></label>
+                <input id="avatar" class="form-control" type="text" name="avatar" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthday"><b>Fecha de nacimiento:</b></label>
+                <input id="birthday" class="form-control" type="date" name="birthday" required>
+            </div>
+
+            <div class="form-group">
+                <label for="msg"><b>Mensaje:</b></label>
+                <input id="msg" class="form-control" type="text" name="msg" required>
+            </div>
+
+            <button class="btn btn-success mt-3 mb-5">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div id="chatContainer" class="jumbotron">
+        <!-- Para renderizar el chat entre clientes -->
+        
+
+    <div id="compressionContainer" class="jumbotron">
+        <!-- Para renderizar la tasa de compresión del chat -->
+        
+    </div>
+</div>
+
+{{!-- ============================================================================ --}}
+
+{{!-- SCRIPT PARA WEBSOCKETS --}}
+<script src="/public/js/client.js"></script>
