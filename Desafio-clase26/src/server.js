@@ -17,8 +17,6 @@ app.use('/public', express.static('public'))
 
 /* ============================================================ */
 /* ========================= COOKIES ========================= */
-// import cookieParser from 'cookie-parser'
-// app.use(cookieParser())
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
 import { mongoDB } from './database/options.js';
@@ -29,12 +27,13 @@ app.use(session({
         mongoOptions: mongoDB.advancedOptions
     }),
     secret: 'cookieForUserLogin',
-    resave: false,
+    resave: true,
+    rolling: true,
     saveUninitialized: false,
     cookie: {
         maxAge: 40000
     }
-}));
+}))
 
 /* ============================================================ */
 /* ======================== HANDLEBARS ======================== */
@@ -78,33 +77,31 @@ passport.use('register', new Strategy(
 
 passport.use('login', new Strategy( 
     (username, password, done) => {
-        console.log("entra login")
         users.getByUsername(username)
             .then(user => {
-                console.log(user)
-                console.log(username + " " + password)
                 if (!user){
-                    console.log("no user")
                     return done(null, false)
                 }
                 if (user.password !== password) {
-                    console.log("no pasw")
                     return done(null, false)
                 }
-                done(null, user);
+                done(null, user)
             })
     }
 ))
 
 passport.serializeUser((user, done) => {
     console.log("quiere serializar")
-    done(null, user)
+    const userSessionInfo = {
+        id: user.id,
+        username: user.username
+    }
+    done(null, userSessionInfo)
 })
 
-passport.deserializeUser((user, done) => {
+passport.deserializeUser((userSessionInfo, done) => {
     console.log("quiere deserializar")
-    console.log(user)
-    done(null, user)
+    done(null, userSessionInfo)
 })
 
 app.use(passport.initialize())
@@ -112,14 +109,14 @@ app.use(passport.session())
 
 app.post('/register', 
     passport.authenticate('register', { 
-        failureRedirect: '/register',
+        failureRedirect: '/failRegister',
         successRedirect: '/login'
     })
 )
 
 app.post('/login', 
     passport.authenticate('login', { 
-        failureRedirect: '/login',
+        failureRedirect: '/failLogin',
         successRedirect: '/api/productos'
     })
 )
@@ -144,6 +141,7 @@ io.on('connection', socket => {
 /* ============================================================ */
 /* ========================== FAKER ========================== */
 import { testingRouter } from "../src/test/testProducts.js"
+import { userInfo } from 'os'
 
 app.use(testingRouter)
 

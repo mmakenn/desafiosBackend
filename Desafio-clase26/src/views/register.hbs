@@ -20,4 +20,9 @@
             <button class="btn btn-success mt-3 mb-5">Enviar</button>
         </form>
     </div>
+    {{#if error}}
+        <div class="jumbotron">
+            <h2 class="h5 bg-danger text-white">Usuario ya registrado.</h2>
+        </div>
+    {{/if}}
 </div>
