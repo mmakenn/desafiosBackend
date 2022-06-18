@@ -18,13 +18,18 @@ sessionRouter.get('/failLogin', (req, res) => {
     res.render('logIn', {error: true})
 })
 
-sessionRouter.get('/logout', (req, res) => {
+sessionRouter.get('/logout', (req, res, next) => {
     if (req.isAuthenticated()) {
         const username = req.user.username
-        // req.logout()
+        req.logout((err) => {
+            if (err) {
+                return next(err)
+            }
+        })
         res.render('logOut', {user: username})
+    } else {
+        res.render('logOut', {user: ""})
     }
-    res.render('logOut', {user: ""})
 })
 
 sessionRouter.get('/api/productos', auth, (req, res, next) => {
