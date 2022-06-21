@@ -1,5 +1,5 @@
 import { ProductsContainer } from '../components/productsContainer.js';
-import { mariaDB as productsDB } from '../database/options.js';
+import { mariaDB as productsDB } from '../../options.js';
 const products = new ProductsContainer("products1", productsDB);
 products.newTable();
 

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { mongoDB } from '../database/options.js';
+import { mongoDB } from '../../options.js';
 
 mongoose.connect(mongoDB.urlServer, mongoDB.options);
 
