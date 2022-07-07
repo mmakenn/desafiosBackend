@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { ContainerMongo } from "../containers/containerMongo.js";
+import { ContainerMongo } from "./containerMongo.js";
 
 /* Normalizacion de los mensajes para ser almacenados en la base de datos. */
 import { normalize, schema, denormalize } from "normalizr";

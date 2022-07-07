@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { ContainerMongo } from "../containers/containerMongo.js";
+import { ContainerMongo } from "./containerMongo.js";
 
 const usersSchema = new mongoose.Schema(
     {
