@@ -15,7 +15,6 @@ class UsersContainer extends ContainerMongo {
     }
 
     async getByUsername(username) {
-        console.log('buscan')
         const user = await this.collection.findOne({ username: username })
         return user
     }
