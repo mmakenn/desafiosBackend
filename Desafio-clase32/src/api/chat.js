@@ -1,4 +1,4 @@
-import logger from './components/logger.js'
+import logger from '../components/logger.js'
 import { ChatContainer } from '../containers/chatContainer.js';
 
 const chat = new ChatContainer();

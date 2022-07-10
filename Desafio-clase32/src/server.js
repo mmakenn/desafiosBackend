@@ -17,7 +17,7 @@ import { testingRouter } from "./router/testProducts.js"
 /* Websockets connection functions */
 import { setApi } from './router/api.js';
 /* Logger */
-import { logger } from './components/logger.js';
+import logger from './components/logger.js';
 
 export function createServer(port) {
     const app = express()

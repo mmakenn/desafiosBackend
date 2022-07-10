@@ -1,4 +1,4 @@
-import { logger } from "../components/logger.js"
+import logger from "../components/logger.js"
 import { Router } from "express"
 const randomRouter = new Router()
 import { fork } from 'child_process'

@@ -1,4 +1,4 @@
-import { logger } from '../components/logger.js';
+import logger from '../components/logger.js';
 import { Router } from 'express';
 const testingRouter = new Router();
 

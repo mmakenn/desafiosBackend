@@ -1,4 +1,4 @@
-import { logger } from "./logger.js"
+import logger from "./logger.js"
 
 export function auth(req, res, next) {
     logger.info('Requerimiento de autentificación.')
