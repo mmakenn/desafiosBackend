@@ -7,7 +7,8 @@ const productos = new Contenedor();
 const errorNotFound = {error: "Producto no encontrado."};
 
 routerProductos.get('/', (req, res) => {
-    res.send(productos.getAll());
+    res.render('productList.ejs', { headers: ["Producto", "Precio", "Imagen"],
+                                    products: productos.getAll()});
 });
 
 routerProductos.get('/:id', (req, res) => {
@@ -23,6 +24,10 @@ routerProductos.delete('/:id', (req, res) => {
 });
 
 routerProductos.post('/', (req, res) => {
+    res.render('newProduct.ejs', { link: '/api/productos/sendNewProductForm' });
+});
+
+routerProductos.post('/sendNewProductForm', (req, res) => {
     const { body } = req;
     const id = productos.save(body);
     res.json({mensaje: `Producto agregado con id: ${id}` });
