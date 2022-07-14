@@ -6,9 +6,16 @@ const productos = new Contenedor();
 
 const errorNotFound = {error: "Producto no encontrado."};
 
+function checkProductsExists(products){
+    return (products.length > 0);
+}
+
 routerProductos.get('/', (req, res) => {
-    res.render('productList.ejs', { headers: ["Producto", "Precio", "Imagen"],
-                                    products: productos.getAll()});
+    const products = productos.getAll();
+    const productsExists = checkProductsExists(products);
+    res.render('productList', { headers: [{title: "Producto"}, {title: "Precio"}, {title: "Imagen"}],
+                                products: products,
+                                productsExists: productsExists });
 });
 
 routerProductos.get('/:id', (req, res) => {
@@ -23,12 +30,10 @@ routerProductos.delete('/:id', (req, res) => {
     res.send(result ? {mensaje: `Producto con id: ${params.id} eliminado` } : errorNotFound);
 });
 
-routerProductos.post('/', (req, res) => {
-    res.render('newProduct.ejs', { link: '/api/productos/sendNewProductForm' });
-});
-
 routerProductos.post('/sendNewProductForm', (req, res) => {
+    console.log("Producto almacenado en persistencia");
     const { body } = req;
+    console.log(body);
     const id = productos.save(body);
     res.json({mensaje: `Producto agregado con id: ${id}` });
 });
