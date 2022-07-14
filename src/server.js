@@ -19,7 +19,7 @@ app.use('/public', express.static('public'))
 /* ========================= COOKIES ========================= */
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
-import { mongoDB } from './database/options.js';
+import { mongoDB } from '../options.js';
 
 app.use(session({
     store: MongoStore.create({
@@ -38,7 +38,7 @@ app.use(session({
 /* ============================================================ */
 /* ======================== HANDLEBARS ======================== */
 import Handlebars from 'express-handlebars'
-import { handlebarsConfig } from "./database/options.js"
+import { handlebarsConfig } from "../options.js"
 
 app.engine('.hbs', Handlebars.engine(handlebarsConfig))
 app.set('view engine', '.hbs')
@@ -91,7 +91,6 @@ passport.use('login', new Strategy(
 ))
 
 passport.serializeUser((user, done) => {
-    console.log("quiere serializar")
     const userSessionInfo = {
         id: user.id,
         username: user.username
@@ -100,7 +99,6 @@ passport.serializeUser((user, done) => {
 })
 
 passport.deserializeUser((userSessionInfo, done) => {
-    console.log("quiere deserializar")
     done(null, userSessionInfo)
 })
 
@@ -124,8 +122,13 @@ app.post('/login',
 /* ============================================================ */
 /* ========================== ROUTER ========================== */
 import { sessionRouter } from './router/sessionUser.js'
+import { infoRouter } from './router/info.js'
+import { randomRouter } from './router/randoms.js'
 
 app.use(sessionRouter)
+app.use(infoRouter)
+app.use(randomRouter)
+
 
 /* ============================================================ */
 /* ======================== WEBSOCKETS ======================== */
@@ -141,14 +144,13 @@ io.on('connection', socket => {
 /* ============================================================ */
 /* ========================== FAKER ========================== */
 import { testingRouter } from "../src/test/testProducts.js"
-import { userInfo } from 'os'
 
 app.use(testingRouter)
 
 /* ============================================================ */
 /* ======================== RUN SERVER ======================== */
 /* ============================================================ */
-const PORT = 8080
+import { PORT } from '../options.js'
 const connectedServer = httpServer.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${connectedServer.address().port}`)
 })
