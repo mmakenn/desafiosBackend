@@ -1,64 +1,55 @@
-const fs = require('fs')
-
 class Contenedor{
-    constructor(fileName) {
-        this.fileName = fileName;
+    constructor() {
+        this.products = [];
     }
 
-    async getAll() {
-        try {
-            const texto = await fs.promises.readFile(this.fileName, {encoding: 'utf-8', flag: 'a+'});
-            if (texto === "") {
-                return [];
-            }
-            return JSON.parse(texto); 
-        } catch (error) {
-            console.log(error)
-        }
+    getAll() {
+        return this.products; 
     }
 
-    async save(object) {
-        try {
-            const objects = await this.getAll();
-            const newId = objects.length + 1;
-            object.id = newId;
-            objects.push(object);
-            const newTexto = JSON.stringify(objects)
-            await fs.promises.writeFile(this.fileName, newTexto);
-            return newId;
-        } catch (error) {
-            console.log(error)
+    save(object) {
+        let newId = 1;
+        if (this.products.length > 0 ){
+            newId = this.products[this.products.length - 1].id + 1;
         }
+        object.id = newId;
+        this.products.push(object);
+        return newId;
     }
 
-    async getById(idNumber) {
-        try {
-            const objects = await this.getAll();
-            const founded = objects.find(object => object.id === idNumber);
-            return founded ? founded : null;
-        } catch (error) {
-            console.log(error)
+    update(id, title, price, thumbnail){
+        const idNumber = parseInt(id);
+        const founded = this.getById(idNumber);
+        if (! founded){
+            return false;
         }
+
+        if (title){
+            founded.title = title;
+        }
+        if (price){
+            founded.price = price;
+        }
+        if (thumbnail){
+            founded.thumbnail = thumbnail;
+        }
+        return true;    
     }
 
-    async deleteById(idNumber) {
-        try {
-            const objects = await this.getAll();
-            const foundedIndex = objects.findIndex(object => object.id === idNumber);
-            objects.splice(foundedIndex, 1);
-            const newTexto = JSON.stringify(objects)
-            await fs.promises.writeFile(this.fileName, newTexto);
-        } catch (error) {
-            console.log(error)
-        }
+    getById(id) {
+        const idNumber = parseInt(id);
+        const founded = this.products.find(object => object.id === idNumber);
+        return founded ? founded : null;
     }
 
-    async deleteAll() {
-        try {
-            await fs.promises.writeFile(this.fileName, "");
-        } catch (error) {
-            console.log(error)
+    deleteById(id) {
+        const idNumber = parseInt(id);
+        const foundedIndex = this.products.findIndex(object => object.id === idNumber);
+        if (foundedIndex === -1) {
+            return false;
         }
+        this.products.splice(foundedIndex, 1);
+        return true
     }
 }
 
