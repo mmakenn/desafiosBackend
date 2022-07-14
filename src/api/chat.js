@@ -1,4 +1,5 @@
-import { ChatContainer } from '../components/chatContainer.js';
+import { ChatContainer } from '../containers/chatContainer.js';
+
 const chat = new ChatContainer();
 
 export function emitChat(socket, io) {

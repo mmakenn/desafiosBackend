@@ -1,4 +1,3 @@
-import { auth } from './authUser.js'
 import { Router } from 'express'
 const sessionRouter = new Router()
 
@@ -31,10 +30,5 @@ sessionRouter.get('/logout', (req, res, next) => {
         res.render('logOut', {user: ""})
     }
 })
-
-sessionRouter.get('/api/productos', auth, (req, res, next) => {
-    res.render('body', {user: req.user.username});
-});
-
 
 export { sessionRouter }

@@ -1,7 +1,6 @@
-import { ProductsContainer } from '../components/productsContainer.js';
-import { mariaDB as productsDB } from '../../options.js';
-const products = new ProductsContainer("products1", productsDB);
-products.newTable();
+import { ProductsContainer } from '../containers/productsContainer.js';
+
+const products = new ProductsContainer()
 
 export function emitProducts(socket, io) {
     products.getAll()

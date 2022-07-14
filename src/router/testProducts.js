@@ -18,8 +18,7 @@ testingRouter.get('/api/productos-test', (req, res) => {
             }
             )
         }
-    res.render('productList', { headers: [{title: "Producto"}, {title: "Precio"}, {title: "Imagen"}, {title: "Stock"}],
-    products: productsTest, productsExists: true});
+    res.render('productList', { products: productsTest, productsExists: true});
 });
 
 export { testingRouter }
