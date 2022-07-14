@@ -3,9 +3,10 @@
     <div class="table-responsive">
         <table class="table table-secondary">
             <tr>
-                {{#each headers}}
-                    <th> {{title}} </th>
-                {{/each}}  
+                <th> Producto </th>
+                <th> Precio </th>
+                <th> Imagen </th>
+                <th> Stock </th>
             </tr>
 
             {{#each products}}
@@ -17,7 +18,7 @@
                         {{price}}
                     </td>
                     <td>
-                        <img src={{thumbnail}} width="25px" alt="">
+                        <img src={{thumbnail}} width="40px" alt="">
                     </td>
                     <td>
                         {{stock}}

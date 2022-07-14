@@ -23,18 +23,13 @@ newProductForm.addEventListener('submit', e => {
 // Manejadores del renderizado de productos.
 socket.on('showProducts', showProducts);
 
-function checkProductsExists(products){
-    return true;
-}
-
 async function showProducts(products) {
     console.log("Se actualiza la tabla.");
-    const template = await fetch('templates/productList.hbs');
+    const template = await fetch('/public/templates/productList.hbs');
     const textTemplate = await template.text();
     const functionTemplate = Handlebars.compile(textTemplate);
-    const productsExists = checkProductsExists(products);
-    const html = functionTemplate({ headers: [{title: "Producto"}, {title: "Precio"}, {title: "Imagen"}, {title: "Stock"}],
-                                    products: products,
+    const productsExists = true;
+    const html = functionTemplate({ products: products,
                                     productsExists: productsExists });
     document.getElementById('tableContainer').innerHTML = html;
 }
@@ -78,7 +73,7 @@ socket.on('showChat', showChat);
 async function showChat(messages) {
     console.log("Se actualiza el chat.");
     const messagesJSON = normalizr.denormalize(messages[0].result, chatSchemaEntity, messages[0].entities);
-    const template = await fetch('templates/chat.hbs');
+    const template = await fetch('/public/templates/chat.hbs');
     const textTemplate = await template.text();
     const functionTemplate = Handlebars.compile(textTemplate);
     const html = functionTemplate({ messages: messagesJSON.chat });

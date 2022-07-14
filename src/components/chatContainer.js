@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { mongoDB } from './database/options.js';
+import { mongoDB } from '../database/options.js';
 mongoose.connect(mongoDB.urlServer, mongoDB.options);
 
 /* Normalizacion de los mensajes para ser almacenados en la base de datos. */
