@@ -43,38 +43,6 @@
 <div class="container mt-3">
     <div id="tableContainer" class="jumbotron">
         <!-- Para renderizar la tabla de productos -->
-        {{!-- {{#if productsExists}}
-            <h2 class="h2"> Nuestros productos. </h2> 
-            <div class="table-responsive">
-                <table class="table table-secondary">
-                    <tr>
-                        <th> Producto </th>
-                        <th> Precio </th>
-                        <th> Imagen </th>
-                        <th> Stock </th>
-                    </tr>
-
-                    {{#each products}}
-                        <tr>
-                            <td>
-                                {{title}}
-                            </td>
-                            <td>
-                                {{price}}
-                            </td>
-                            <td>
-                                <img src={{thumbnail}} width="40px" alt="">
-                            </td>
-                            <td>
-                                {{stock}}
-                            </td>
-                        </tr>
-                    {{/each}}
-                </table>
-            </div>
-        {{else}}
-            <h2 class="alert alert-danger"> No hay productos </h2>
-        {{/if}} --}}
     </div>
 </div>
 
@@ -129,24 +97,7 @@
 <div class="container mt-3">
     <div id="chatContainer" class="jumbotron">
         <!-- Para renderizar el chat entre clientes -->
-        <div class="table-responsive">
-            <table class="table table-secondary">
-                {{#each messages}}
-                    <tr>
-                        <td class="w-25 user">
-                            {{author.id}}
-                        </td>
-                        <td class="w-25 dateMsg">
-                            {{date}}
-                        </td>
-                        <td class="msg">
-                            {{text}}
-                        </td>
-                    </tr>
-                {{/each}}
-            </table>
-        </div>
-    </div>
+        
 
     <div id="compressionContainer" class="jumbotron">
         <!-- Para renderizar la tasa de compresión del chat -->

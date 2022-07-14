@@ -1,5 +1,5 @@
 {
-  "name": "desafio-clase24",
+  "name": "desafio-clase26",
   "type": "module",
   "version": "1.0.0",
   "description": "",
@@ -23,6 +23,8 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
     "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
     "socket.io": "^4.5.1"
   }
 }

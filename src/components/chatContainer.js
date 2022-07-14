@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
-import { mongoDB } from '../database/options.js';
-mongoose.connect(mongoDB.urlServer, mongoDB.options);
+import { ContainerMongo } from "../containers/containerMongo.js";
 
 /* Normalizacion de los mensajes para ser almacenados en la base de datos. */
 import { normalize, schema, denormalize } from "normalizr";
@@ -21,14 +20,9 @@ const chatSchema = new mongoose.Schema(
     }
 );
 
-class ChatContainer {
+class ChatContainer extends ContainerMongo {
     constructor(){
-        this.collection = mongoose.model("chat", chatSchema);
-    }
-
-    async getAll() {
-        const all = await this.collection.find({});
-        return all;
+        super("chat", chatSchema);
     }
 
     async save(message) {
@@ -60,10 +54,6 @@ class ChatContainer {
         catch(err) {
             console.error(err);
         }
-    }
-
-    async close(){
-        await mongoose.disconnect();
     }
 }
 
