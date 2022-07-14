@@ -1,3 +1,4 @@
+import logger from '../components/logger.js';
 import { Router } from 'express';
 const testingRouter = new Router();
 
@@ -7,6 +8,7 @@ import { faker } from '@faker-js/faker';
 faker.locale = 'es';
 
 testingRouter.get('/api/productos-test', (req, res) => {
+    logger.info(`Request to URL: ${req.url} with method: ${req.method}`)
     const productsTest = [];
     for (let i = 0; i < 5; i++){
         productsTest.push(

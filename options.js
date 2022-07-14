@@ -11,6 +11,8 @@ export const mongoDB = {
     }
 }
 
+export const PORT = process.env.PORT ?? 8080
+
 import os from 'os'
 
 export const infoProcess = {
@@ -24,8 +26,8 @@ export const infoProcess = {
     folder: process.execPath.split('/').pop()
 }
 
+
 /* Argv(s) */
 import parseArgs from 'minimist'
 
-export const PORT = Number(parseArgs(process.argv).port ?? 8080)
 export const SERVER_MODE = parseArgs(process.argv).server_mode ?? 'fork'

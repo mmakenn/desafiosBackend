@@ -1,0 +1,878 @@
+Statistical profiling result from isolate-info.log, (5675 ticks, 8 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   4479   78.9%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+    113    2.0%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      4    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+      3    0.1%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     46    0.8%    4.3%  LazyCompile: *wrap /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+     36    0.6%    3.3%  LazyCompile: *parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     20    0.4%    1.9%  LazyCompile: *resolve node:path:1091:10
+     20    0.4%    1.9%  LazyCompile: *SourceNode_walk /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/source-map/lib/source-node.js:221:53
+     16    0.3%    1.5%  LazyCompile: *castChunk /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+     14    0.2%    1.3%  LazyCompile: *next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     10    0.2%    0.9%  LazyCompile: *step /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     10    0.2%    0.9%  LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/source-map/lib/source-node.js:174:29
+      8    0.1%    0.7%  LazyCompile: *normalizeString node:path:66:25
+      8    0.1%    0.7%  LazyCompile: *SourceNode_add /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/source-map/lib/source-node.js:172:51
+      6    0.1%    0.6%  LazyCompile: *anonymous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:12:42
+      6    0.1%    0.6%  LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:251:47
+      5    0.1%    0.5%  RegExp: ^(?:[^\x00]*?(?=(\{\{)))
+      5    0.1%    0.5%  RegExp: (?:\r\n?|\n).*
+      5    0.1%    0.5%  LazyCompile: *generateList /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:143:38
+      5    0.1%    0.5%  LazyCompile: *__awaiter /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:18:54
+      5    0.1%    0.5%  LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:30:40
+      4    0.1%    0.4%  RegExp: [\u0000-\u001f\u0022\u005c\ud800-\udfff]|[\ud800-\udbff](?![\udc00-\udfff])|(?:[^\ud800-\udbff]|^)[\udc00-\udfff]
+      4    0.1%    0.4%  LazyCompile: *relative node:path:1190:11
+      4    0.1%    0.4%  Function: ^fulfilled /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+      3    0.1%    0.3%  RegExp: (^|\r?\n)\s*?$
+      3    0.1%    0.3%  LazyCompile: *next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+      3    0.1%    0.3%  LazyCompile: *extend /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/utils.js:28:16
+      3    0.1%    0.3%  LazyCompile: *anonymous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:549:49
+      3    0.1%    0.3%  LazyCompile: *ambiguousSexpr /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:248:42
+      3    0.1%    0.3%  LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:130:39
+      3    0.1%    0.3%  Function: ^format /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/content-type/index.js:65:17
+      3    0.1%    0.3%  Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:167:47
+      2    0.0%    0.2%  RegExp: ^(?:as\s+\|)
+      2    0.0%    0.2%  RegExp: \r?\n\s*?$
+      2    0.0%    0.2%  LazyCompile: *template /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/runtime.js:52:18
+      2    0.0%    0.2%  LazyCompile: *setupParams /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      2    0.0%    0.2%  LazyCompile: *quotedString /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      2    0.0%    0.2%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    0.0%    0.2%  LazyCompile: *popStack /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:960:30
+      2    0.0%    0.2%  LazyCompile: *opcode /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:347:26
+      2    0.0%    0.2%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      2    0.0%    0.2%  LazyCompile: *lookupProperty /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/runtime.js:118:44
+      2    0.0%    0.2%  LazyCompile: *lookupOnContext /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      2    0.0%    0.2%  LazyCompile: *invokeAmbiguous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      2    0.0%    0.2%  LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2    0.0%    0.2%  LazyCompile: *classifySexpr /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:363:40
+      2    0.0%    0.2%  LazyCompile: *WhitespaceControl.Program /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      2    0.0%    0.2%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      2    0.0%    0.2%  LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      2    0.0%    0.2%  Function: ^processPromiseRejections node:internal/process/promises:211:34
+      2    0.0%    0.2%  Function: ^maybeReadMore_ /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_readable.js:565:24
+      2    0.0%    0.2%  Function: ^dispatch /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/route.js:98:45
+      2    0.0%    0.2%  Function: ^debug /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/node_modules/debug/src/debug.js:65:17
+      2    0.0%    0.2%  Function: ^appendToBuffer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      2    0.0%    0.2%  Function: ^afterWrite node:internal/streams/writable:487:20
+      2    0.0%    0.2%  Function: ^RES /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/inflight/inflight.js:18:28
+      2    0.0%    0.2%  Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/graceful-fs/graceful-fs.js:118:50
+      1    0.0%    0.1%  RegExp: ^\[.*\]$
+      1    0.0%    0.1%  RegExp: ^\/register\/?$
+      1    0.0%    0.1%  RegExp: ^\/logout\/?$
+      1    0.0%    0.1%  RegExp: ^\.|this\b
+      1    0.0%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    0.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.1%  RegExp: ^(?:undefined(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:null(?=([~}\s)])))
+      1    0.0%    0.1%  RegExp: ^(?:\}\}\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\{)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\^\s*(~)?\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\^)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?\/)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?#\*?)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?#>)
+      1    0.0%    0.1%  RegExp: ^(?:\{\{(~)?![\s\S]*?\}\})
+      1    0.0%    0.1%  RegExp: ^(?:\s+)
+      1    0.0%    0.1%  RegExp: ^(?:\))
+      1    0.0%    0.1%  RegExp: ^(?:([^\s!"#%-,\.\/;->@\[-\^`\{-~]+(?=([=~}\s\/.)|]))))
+      1    0.0%    0.1%  RegExp: [&<>"'`=]
+      1    0.0%    0.1%  LazyCompile: *pushStackLiteral /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:877:46
+      1    0.0%    0.1%  LazyCompile: *preparePath /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:63:21
+      1    0.0%    0.1%  LazyCompile: *parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:413:9
+      1    0.0%    0.1%  LazyCompile: *getPathFromURLPosix node:internal/url:1398:29
+      1    0.0%    0.1%  LazyCompile: *extname node:path:1385:10
+      1    0.0%    0.1%  LazyCompile: *emit node:events:475:44
+      1    0.0%    0.1%  LazyCompile: *basename node:path:1306:11
+      1    0.0%    0.1%  LazyCompile: *appendToBuffer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      1    0.0%    0.1%  LazyCompile: *_write node:internal/streams/writable:283:16
+      1    0.0%    0.1%  LazyCompile: *_addListener node:events:555:22
+      1    0.0%    0.1%  LazyCompile: *__generator /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:27:58
+      1    0.0%    0.1%  LazyCompile: *SourceNode_prepend /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/source-map/lib/source-node.js:197:59
+      1    0.0%    0.1%  LazyCompile: *PathExpression /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:289:42
+      1    0.0%    0.1%  LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:85:24
+      1    0.0%    0.1%  Function: ^yy.locInfo /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:42:25
+      1    0.0%    0.1%  Function: ^writeOrBuffer node:internal/streams/writable:365:23
+      1    0.0%    0.1%  Function: ^urlencodedParser /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      1    0.0%    0.1%  Function: ^unenroll node:timers:78:18
+      1    0.0%    0.1%  Function: ^toString /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/uid-safe/index.js:102:19
+      1    0.0%    0.1%  Function: ^syncExports node:internal/bootstrap/loaders:287:14
+      1    0.0%    0.1%  Function: ^stripFlags /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js:52:20
+      1    0.0%    0.1%  Function: ^stringToFlags node:internal/fs/utils:556:23
+      1    0.0%    0.1%  Function: ^setopts /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/common.js:48:18
+      1    0.0%    0.1%  Function: ^setHeader node:_http_outgoing:574:57
+      1    0.0%    0.1%  Function: ^set maxAge /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/session/cookie.js:83:13
+      1    0.0%    0.1%  Function: ^sent /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:28:39
+      1    0.0%    0.1%  Function: ^res.get /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:811:19
+      1    0.0%    0.1%  Function: ^removeListener node:events:689:28
+      1    0.0%    0.1%  Function: ^readableAddChunk /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_readable.js:249:26
+      1    0.0%    0.1%  Function: ^readFile node:fs:373:18
+      1    0.0%    0.1%  Function: ^query /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/middleware/query.js:39:24
+      1    0.0%    0.1%  Function: ^pushAsyncContext node:internal/async_hooks:540:26
+      1    0.0%    0.1%  Function: ^processHeader node:_http_outgoing:501:23
+      1    0.0%    0.1%  Function: ^parserOnIncoming node:_http_server:857:26
+      1    0.0%    0.1%  Function: ^normalizeString node:path:66:25
+      1    0.0%    0.1%  Function: ^nextTick node:internal/process/task_queues:104:18
+      1    0.0%    0.1%  Function: ^msFromTimeSpec node:internal/fs/utils:447:24
+      1    0.0%    0.1%  Function: ^makeRequireFunction node:internal/modules/cjs/helpers:58:29
+      1    0.0%    0.1%  Function: ^makeAbs /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/common.js:203:18
+      1    0.0%    0.1%  Function: ^insert node:internal/timers:350:16
+      1    0.0%    0.1%  Function: ^innerOk node:assert:377:17
+      1    0.0%    0.1%  Function: ^initHooksExist node:internal/async_hooks:479:24
+      1    0.0%    0.1%  Function: ^header /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:777:29
+      1    0.0%    0.1%  Function: ^hb.compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars.js:38:25
+      1    0.0%    0.1%  Function: ^hasObserver node:internal/perf/observe:441:21
+      1    0.0%    0.1%  Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:136:31
+      1    0.0%    0.1%  Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/application.js:165:29
+      1    0.0%    0.1%  Function: ^fromStringFast node:buffer:413:24
+      1    0.0%    0.1%  Function: ^from node:buffer:296:28
+      1    0.0%    0.1%  Function: ^extname node:path:1385:10
+      1    0.0%    0.1%  Function: ^end /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:250:27
+      1    0.0%    0.1%  Function: ^emitReadable node:internal/streams/readable:563:22
+      1    0.0%    0.1%  Function: ^emit node:events:475:44
+      1    0.0%    0.1%  Function: ^each /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:91:22
+      1    0.0%    0.1%  Function: ^doWrite /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_writable.js:404:17
+      1    0.0%    0.1%  Function: ^createHash node:crypto:129:20
+      1    0.0%    0.1%  Function: ^createFrame /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/utils.js:110:21
+      1    0.0%    0.1%  Function: ^contentType /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:619:32
+      1    0.0%    0.1%  Function: ^compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    0.0%    0.1%  Function: ^castChunk /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:52:19
+      1    0.0%    0.1%  Function: ^basename node:path:1306:11
+      1    0.0%    0.1%  Function: ^authenticate /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/passport/lib/middleware/authenticate.js:94:31
+      1    0.0%    0.1%  Function: ^assertSize node:internal/crypto/random:75:20
+      1    0.0%    0.1%  Function: ^_flushOutput node:_http_outgoing:951:63
+      1    0.0%    0.1%  Function: ^_addListener node:events:555:22
+      1    0.0%    0.1%  Function: ^WhitespaceControl.Program /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js:19:48
+      1    0.0%    0.1%  Function: ^Transform.push /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_transform.js:137:37
+      1    0.0%    0.1%  Function: ^SourceNode /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/source-map/lib/source-node.js:35:20
+      1    0.0%    0.1%  Function: ^Socket._writev node:net:823:36
+      1    0.0%    0.1%  Function: ^Readable.read node:internal/streams/readable:394:35
+      1    0.0%    0.1%  Function: ^Readable.read /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_readable.js:392:36
+      1    0.0%    0.1%  Function: ^Readable.push node:internal/streams/readable:227:35
+      1    0.0%    0.1%  Function: ^OutgoingMessage node:_http_outgoing:97:25
+      1    0.0%    0.1%  Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    0.0%    0.1%  Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    0.0%    0.1%  Function: ^Long.toNumber /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/bson/lib/long.js:734:40
+      1    0.0%    0.1%  Function: ^ExpressHandlebars.renderView /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:246:55
+      1    0.0%    0.1%  Function: ^ExpressHandlebars.getPartials /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:93:56
+      1    0.0%    0.1%  Function: ^ExpressHandlebars._getDir /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:327:52
+      1    0.0%    0.1%  Function: ^ContentType /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/content-type/index.js:219:22
+      1    0.0%    0.1%  Function: ^<anonymous> node:internal/validators:168:39
+      1    0.0%    0.1%  Function: ^<anonymous> node:internal/fs/utils:669:38
+      1    0.0%    0.1%  Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:505:34
+      1    0.0%    0.1%  Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:598:43
+      1    0.0%    0.1%  Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:368:47
+      1    0.0%    0.1%  Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:251:47
+      1    0.0%    0.1%  Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:107:67
+
+ [C++]:
+   ticks  total  nonlib   name
+    374    6.6%   34.8%  __write@@GLIBC_2.2.5
+     60    1.1%    5.6%  epoll_pwait@@GLIBC_2.6
+     57    1.0%    5.3%  syscall@@GLIBC_2.2.5
+     37    0.7%    3.4%  fwrite@@GLIBC_2.2.5
+     20    0.4%    1.9%  __read@@GLIBC_2.2.5
+     19    0.3%    1.8%  __libc_malloc@@GLIBC_2.2.5
+     11    0.2%    1.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     11    0.2%    1.0%  pthread_cond_signal@@GLIBC_2.3.2
+     10    0.2%    0.9%  __mprotect@@GLIBC_PRIVATE
+      7    0.1%    0.7%  _IO_file_xsputn@@GLIBC_2.2.5
+      5    0.1%    0.5%  operator new(unsigned long)@@GLIBCXX_3.4
+      5    0.1%    0.5%  __pthread_rwlock_wrlock@GLIBC_2.2.5
+      5    0.1%    0.5%  __pthread_mutex_lock@GLIBC_2.2.5
+      4    0.1%    0.4%  cfree@GLIBC_2.2.5
+      3    0.1%    0.3%  shutdown@@GLIBC_2.2.5
+      3    0.1%    0.3%  operator delete(void*)@@GLIBCXX_3.4
+      3    0.1%    0.3%  __pthread_mutex_unlock@GLIBC_2.2.5
+      2    0.0%    0.2%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      1    0.0%    0.1%  std::locale::id::_M_id() const@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const@@GLIBCXX_3.4.18
+      1    0.0%    0.1%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.0%    0.1%  brk@@GLIBC_2.2.5
+      1    0.0%    0.1%  accept4@@GLIBC_2.10
+      1    0.0%    0.1%  __open@@GLIBC_2.2.5
+      1    0.0%    0.1%  __mmap@@GLIBC_PRIVATE
+      1    0.0%    0.1%  __lll_lock_wake_private@@GLIBC_PRIVATE
+      1    0.0%    0.1%  __lll_lock_wait_private@@GLIBC_PRIVATE
+      1    0.0%    0.1%  _IO_setb@@GLIBC_2.2.5
+      1    0.0%    0.1%  _IO_file_write@@GLIBC_2.2.5
+      1    0.0%    0.1%  _IO_file_sync@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+    418    7.4%   38.8%  JavaScript
+    650   11.5%   60.4%  C++
+    286    5.0%   26.6%  GC
+   4599   81.0%          Shared libraries
+      8    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    284   63.8%    5.0%  __write@@GLIBC_2.2.5
+     57   12.8%    1.0%  syscall@@GLIBC_2.2.5
+     36    8.1%    0.6%  fwrite@@GLIBC_2.2.5
+     13    2.9%    0.2%  __libc_malloc@@GLIBC_2.2.5
+     10    2.2%    0.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      8    1.8%    0.1%  __mprotect@@GLIBC_PRIVATE
+      7    1.6%    0.1%  _IO_file_xsputn@@GLIBC_2.2.5
+      4    0.9%    0.1%  operator new(unsigned long)@@GLIBCXX_3.4
+      4    0.9%    0.1%  __pthread_rwlock_wrlock@GLIBC_2.2.5
+      3    0.7%    0.1%  pthread_cond_signal@@GLIBC_2.3.2
+      3    0.7%    0.1%  operator delete(void*)@@GLIBCXX_3.4
+      2    0.4%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.4%    0.0%  cfree@GLIBC_2.2.5
+      2    0.4%    0.0%  __pthread_mutex_unlock@GLIBC_2.2.5
+      2    0.4%    0.0%  __pthread_mutex_lock@GLIBC_2.2.5
+      1    0.2%    0.0%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      1    0.2%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      1    0.2%    0.0%  std::locale::id::_M_id() const@@GLIBCXX_3.4
+      1    0.2%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const@@GLIBCXX_3.4.18
+      1    0.2%    0.0%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.2%    0.0%  __open@@GLIBC_2.2.5
+      1    0.2%    0.0%  _IO_setb@@GLIBC_2.2.5
+      1    0.2%    0.0%  _IO_file_write@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   4479   78.9%  /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+   2882   64.3%    /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+    463   16.1%      Function: ^compileFunction node:vm:308:25
+    459   99.1%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    458   99.8%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+    442   96.5%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     16    3.5%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+    288   10.0%      Function: ^stat node:internal/modules/cjs/loader:151:14
+    150   52.1%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+    137   91.3%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+    126   92.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      8    5.8%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      3    2.2%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+     13    8.7%          Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+     13  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+    135   46.9%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+    133   98.5%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+    133  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2    1.5%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   50.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1   50.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+    262    9.1%      Function: ^moduleStrategy node:internal/modules/esm/translators:112:56
+    262  100.0%        Function: ^moduleProvider node:internal/modules/esm/loader:322:28
+    262  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+    200    6.9%      Function: ^statSync node:fs:1543:18
+    181   90.5%        Function: ^tryStat /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/view.js:174:17
+    179   98.9%          Function: ^resolve /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/view.js:146:42
+    179  100.0%            Function: ^lookup /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/view.js:104:40
+      2    1.1%          LazyCompile: ~resolve /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/view.js:146:42
+      2  100.0%            Function: ^lookup /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/view.js:104:40
+     15    7.5%        Function: ^tryStatSync node:internal/modules/esm/resolve:189:3
+      9   60.0%          Function: ^finalizeResolution node:internal/modules/esm/resolve:397:28
+      9  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:988:23
+      3   20.0%          LazyCompile: ~packageResolve node:internal/modules/esm/resolve:897:24
+      2   66.7%            Function: ^moduleResolve node:internal/modules/esm/resolve:988:23
+      1   33.3%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:988:23
+      2   13.3%          LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:397:28
+      2  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:988:23
+      1    6.7%          Function: ^packageResolve node:internal/modules/esm/resolve:897:24
+      1  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:988:23
+      2    1.0%        LazyCompile: ~fileExists node:internal/modules/esm/resolve:288:20
+      2  100.0%          LazyCompile: ~legacyMainResolve node:internal/modules/esm/resolve:304:27
+      2  100.0%            LazyCompile: ~packageResolve node:internal/modules/esm/resolve:897:24
+     75    2.6%      /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      8   10.7%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      6   75.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      3   50.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      3   50.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1   12.5%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   12.5%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      5    6.7%        Function: ^parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:413:9
+      5  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      5  100.0%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:222:19
+      4    5.3%        LazyCompile: *pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      3   75.0%          Function: ^append /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      3  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   25.0%          Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      4    5.3%        LazyCompile: *parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:413:9
+      4  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      4  100.0%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:222:19
+      3    4.0%        LazyCompile: ~next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      3  100.0%          LazyCompile: ~lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      3  100.0%            LazyCompile: ~lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      3    4.0%        Function: ^mergeSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      2   66.7%          Function: ^createFunctionContext /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:216:56
+      2  100.0%            Function: ^compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   33.3%          LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      3    4.0%        Function: ^header /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:777:29
+      3  100.0%          Function: ^contentType /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:619:32
+      3  100.0%            Function: ^send /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:111:25
+      3    4.0%        Function: ^expressInit /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/middleware/init.js:29:30
+      2   66.7%          Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            Function: ^trim_prefix /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:293:23
+      1   33.3%          LazyCompile: *trim_prefix /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+      3    4.0%        Function: ^checkInvalidHeaderChar node:_http_common:232:32
+      3  100.0%          Function: ^<anonymous> node:_http_outgoing:564:45
+      3  100.0%            Function: ^setHeader node:_http_outgoing:574:57
+      1    1.3%        LazyCompile: ~trimTabAndNewline /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/whatwg-url/lib/url-state-machine.js:449:27
+      1  100.0%          Function: ^URLStateMachine /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%            LazyCompile: ~module.exports.basicURLParse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1    1.3%        LazyCompile: ~strEscape /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/safe-stable-stringify/index.js:55:20
+      1  100.0%          LazyCompile: ~stringifyFnReplacer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/safe-stable-stringify/index.js:203:32
+      1  100.0%            LazyCompile: ~stringify /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/safe-stable-stringify/index.js:594:22
+      1    1.3%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:507:36
+      1  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:572:30
+      1  100.0%            LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:678:31
+      1    1.3%        LazyCompile: ~matchesParentDomain /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/connection_string.js:32:29
+      1  100.0%          LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/connection_string.js:55:72
+      1  100.0%            LazyCompile: ~onresolve node:dns:207:19
+      1    1.3%        LazyCompile: ~isBad node:tls:189:17
+      1  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1  100.0%            LazyCompile: ~check node:tls:171:15
+      1    1.3%        LazyCompile: ~compileFunction node:vm:308:25
+      1  100.0%          LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.3%        LazyCompile: ~Monitor /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/monitor.js:41:16
+      1  100.0%          Function: ^Server /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/server.js:28:16
+      1  100.0%            Function: ^createAndConnectServer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology.js:514:32
+      1    1.3%        LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:217:36
+      1  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1  100.0%            LazyCompile: ~make /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:188:8
+      1    1.3%        LazyCompile: *step /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1  100.0%          LazyCompile: *__awaiter /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:18:54
+      1  100.0%            Function: ^ExpressHandlebars._getDir /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:327:52
+      1    1.3%        LazyCompile: *quotedString /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      1  100.0%          Function: ^pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            Function: ^append /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1    1.3%        Function: ~<anonymous> node:zlib:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    1.3%        Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.3%        Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.3%        Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/compression/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    1.3%        Function: ^translatePeerCertificate node:_tls_common:125:34
+      1  100.0%          Function: ^translatePeerCertificate node:_tls_common:125:34
+      1  100.0%            Function: ^TLSSocket.getPeerCertificate node:_tls_wrap:986:50
+      1    1.3%        Function: ^strEscape /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/safe-stable-stringify/index.js:55:20
+      1  100.0%          Function: ^stringifyFnReplacer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/safe-stable-stringify/index.js:203:32
+      1  100.0%            Function: ^stringifyFnReplacer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/safe-stable-stringify/index.js:203:32
+      1    1.3%        Function: ^setupHelperArgs /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1  100.0%          LazyCompile: *invokeAmbiguous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    1.3%        Function: ^send /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:111:25
+      1  100.0%          Function: ^done /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:1033:27
+      1  100.0%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:251:47
+      1    1.3%        Function: ^ret /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/runtime.js:188:15
+      1  100.0%          LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%            LazyCompile: *step /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1    1.3%        Function: ^realpathSync node:fs:2425:22
+      1  100.0%          LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:397:28
+      1  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:988:23
+      1    1.3%        Function: ^quotedString /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      1  100.0%          Function: ^pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            LazyCompile: ~append /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1    1.3%        Function: ^passLookupPropertyOption /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/runtime.js:366:34
+      1  100.0%          Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/runtime.js:360:47
+      1  100.0%            /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1    1.3%        Function: ^parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%          Function: ^parseWithoutProcessing /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%            Function: ^parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1    1.3%        Function: ^parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/content-type/index.js:106:16
+      1  100.0%          Function: ^setCharset /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/utils.js:248:41
+      1  100.0%            Function: ^send /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:111:25
+      1    1.3%        Function: ^objectLiteral /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:123:40
+      1  100.0%          Function: ^objectLiteral /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1002:40
+      1  100.0%            Function: ^setupHelperArgs /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1    1.3%        Function: ^next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: ~lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%            LazyCompile: ~lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      1    1.3%        Function: ^isAbsolute node:path:1156:13
+      1  100.0%          Function: ^setopts /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/common.js:48:18
+      1  100.0%            Function: ^Glob /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:117:15
+      1    1.3%        Function: ^format /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/content-type/index.js:65:17
+      1  100.0%          Function: ^setCharset /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/utils.js:248:41
+      1  100.0%            Function: ^send /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:111:25
+      1    1.3%        Function: ^compileFunction node:vm:308:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.3%        Function: ^appendToBuffer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      1  100.0%          Function: ^pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1    1.3%        Function: ^_write node:internal/streams/writable:283:16
+      1  100.0%          Function: ^Writable.write node:internal/streams/writable:333:36
+      1  100.0%            Function: ^_writeRaw node:_http_outgoing:344:19
+      1    1.3%        Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/schema/number.js:1:1
+      1    1.3%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    1.3%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    1.3%        Function: ^Glob._process /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:295:36
+      1  100.0%          Function: ^Glob /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:117:15
+      1  100.0%            Function: ^glob /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:62:15
+      1    1.3%        Function: ^<anonymous> node:internal/fs/utils:358:35
+      1  100.0%          Function: ^<anonymous> node:internal/fs/utils:669:38
+      1  100.0%            Function: ^realpathSync node:fs:2425:22
+      1    1.3%        Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:222:19
+      1  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1  100.0%            Function: ^make /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/minimatch/minimatch.js:188:8
+     73    2.5%      Function: ^openSync node:fs:576:18
+     73  100.0%        Function: ^readFileSync node:fs:450:22
+     66   90.4%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     66  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      7    9.6%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      6   85.7%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1   14.3%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+     61    2.1%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     47   77.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+     10   21.3%          Function: ~<anonymous> node:crypto:1:1
+     10  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5   10.6%          Function: ~<anonymous> node:http:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    8.5%          Function: ~<anonymous> node:internal/child_process:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    6.4%          Function: ~<anonymous> node:tls:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    6.4%          Function: ~<anonymous> node:_http_client:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.3%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      2  100.0%            LazyCompile: ~get node:crypto:287:8
+      2    4.3%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.3%          Function: ~<anonymous> node:child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.3%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.3%          Function: ~<anonymous> node:_tls_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.1%          LazyCompile: ~listenInCluster node:net:1410:25
+      1  100.0%            LazyCompile: ~Server.listen node:net:1453:35
+      1    2.1%          LazyCompile: ~lazyLoadStreams node:fs:2858:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:3001:17
+      1    2.1%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:477:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:28:36
+      1    2.1%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:58:28
+      1  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:148:60
+      1    2.1%          LazyCompile: ~get node:dns:334:8
+      1  100.0%            /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1    2.1%          LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%            LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:125:19
+      1    2.1%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.1%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.1%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.1%          Function: ~<anonymous> node:https:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.1%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.1%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     10   16.4%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+     10  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+     10  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      4    6.6%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      4  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      4  100.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:254:58
+     49    1.7%      LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+     30   61.2%        LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+     30  100.0%          LazyCompile: *step /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     26   86.7%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:30:40
+      4   13.3%            LazyCompile: *fulfilled /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:21:27
+     19   38.8%        Function: ^compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+     19  100.0%          Function: ^ret /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+     19  100.0%            Function: ^ExpressHandlebars._renderTemplate /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+     45    1.6%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     45  100.0%        Function: ^Socket._writeGeneric node:net:791:42
+     45  100.0%          Function: ^Socket._writev node:net:823:36
+     45  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+     38    1.3%      Function: ^close node:internal/fs/read_file_context:111:8
+     37   97.4%        Function: ^readFileAfterRead node:internal/fs/read_file_context:25:27
+      1    2.6%        LazyCompile: ~readFileAfterRead node:internal/fs/read_file_context:25:27
+     36    1.2%      Function: ^read node:internal/modules/package_json_reader:16:14
+     36  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+     28   77.8%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+     28  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      7   19.4%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      7  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    2.8%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     34    1.2%      LazyCompile: *next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+     34  100.0%        LazyCompile: *parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+     20   58.8%          LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+     20  100.0%            LazyCompile: *step /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+     14   41.2%          Function: ^parseWithoutProcessing /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+     14  100.0%            Function: ^parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+     33    1.1%      Function: ^read node:internal/fs/read_file_context:85:7
+     33  100.0%        Function: ^readFileAfterStat node:fs:326:27
+     31    1.1%      Function: ^initialize /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/passport/lib/middleware/initialize.js:51:29
+     20   64.5%        Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/layer.js:86:49
+     20  100.0%          Function: ^trim_prefix /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:293:23
+     17   85.0%            LazyCompile: *next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+      3   15.0%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:280:64
+     11   35.5%        LazyCompile: *trim_prefix /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:293:23
+     11  100.0%          LazyCompile: *next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+     11  100.0%            Function: ^session /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:179:26
+     30    1.0%      LazyCompile: *wrap /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:101:22
+      9   30.0%        LazyCompile: *invokeAmbiguous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      9  100.0%          LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      6   66.7%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      3   33.3%            Function: ^compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      6   20.0%        Function: ^push /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:868:22
+      4   66.7%          Function: ^replaceStack /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      3   75.0%            Function: ^resolvePath /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1   25.0%            Function: ^append /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1   16.7%          LazyCompile: *replaceStack /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1  100.0%            Function: ^append /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1   16.7%          Function: ^invokeAmbiguous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            Function: ^compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      5   16.7%        LazyCompile: *resolvePath /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      5  100.0%          Function: ^lookupOnContext /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      5  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3   10.0%        LazyCompile: *appendToBuffer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      2   66.7%          Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   33.3%          Function: ^pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      3   10.0%        Function: ^appendToBuffer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:42:42
+      2   66.7%          Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      2  100.0%            Function: ^compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   33.3%          Function: ^pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%            Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1    3.3%        LazyCompile: *replaceStack /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1  100.0%          Function: ^resolvePath /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1  100.0%            Function: ^lookupOnContext /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1    3.3%        LazyCompile: *lookupOnContext /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+      1  100.0%          LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    3.3%        LazyCompile: *appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    3.3%        Function: ^functionCall /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:113:38
+      1  100.0%          Function: ^invokeAmbiguous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            Function: ^compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+
+    374    6.6%  __write@@GLIBC_2.2.5
+    283   75.7%    /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+     13    4.6%      /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1    7.7%        LazyCompile: ~updateRsFromPrimary /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology_description.js:275:29
+      1  100.0%          LazyCompile: ~update /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology_description.js:139:11
+      1  100.0%            LazyCompile: ~serverUpdateHandler /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology.js:360:24
+      1    7.7%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:507:36
+      1  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:572:30
+      1  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:572:30
+      1    7.7%        LazyCompile: ~module.exports /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/winston/lib/winston/create-logger.js:25:27
+      1  100.0%          Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/winston/lib/winston.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    7.7%        LazyCompile: ~module.exports /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/@colors/colors/lib/system/has-flag.js:27:26
+      1  100.0%          Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/@colors/colors/lib/system/supports-colors.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    7.7%        LazyCompile: ~import node:internal/modules/esm/loader:372:15
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/modules/run_main:51:29
+      1  100.0%            LazyCompile: ~loadESM node:internal/process/esm_loader:85:41
+      1    7.7%        LazyCompile: ~forProperties /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/winston/lib/winston/common.js:52:16
+      1  100.0%          Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/winston/lib/winston.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    7.7%        LazyCompile: ~applyQueryMiddleware /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/helpers/query/applyQueryMiddleware.js:26:30
+      1  100.0%          LazyCompile: ~compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/model.js:4800:33
+      1  100.0%            LazyCompile: ~Mongoose._model /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/index.js:569:37
+      1    7.7%        LazyCompile: ~addColors /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/logform/colorize.js:36:19
+      1  100.0%          LazyCompile: ~module.exports /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/logform/levels.js:9:18
+      1  100.0%            Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/winston/lib/winston/config/index.js:1:1
+      1    7.7%        Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    7.7%        Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/body-parser/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    7.7%        Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/@colors/colors/lib/colors.js:96:23
+      1  100.0%          Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/@colors/colors/lib/colors.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    7.7%        Function: ^next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%          LazyCompile: ~lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%            LazyCompile: ~lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      3    1.1%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:89:28
+      3  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:28:36
+      3  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      3    1.1%      LazyCompile: ~internalNameLookup /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:66:50
+      3  100.0%        LazyCompile: ~nameLookup /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:29:34
+      3  100.0%          LazyCompile: ~invokeAmbiguous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      3  100.0%            LazyCompile: ~compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      3    1.1%      LazyCompile: ~handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%        LazyCompile: ~trim_prefix /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:293:23
+      3  100.0%          LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:280:64
+      3  100.0%            LazyCompile: ~process_params /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:338:47
+      3    1.1%      LazyCompile: ~createAndConnectServer /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology.js:514:32
+      3  100.0%        LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology.js:177:57
+      3  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      3  100.0%            LazyCompile: ~connect /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology.js:158:12
+      3    1.1%      LazyCompile: ~compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      3  100.0%        LazyCompile: ~ret /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      3  100.0%          LazyCompile: ~ExpressHandlebars._renderTemplate /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+      2   66.7%            LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1   33.3%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      3    1.1%      LazyCompile: ~ce file:///media/mmakenn/Seagate%20Expansion%20Drive/MAC/DEV/CODERHOUSE/4-30935-programaci%C3%B3n-backend/desafios/Desafio-clase32/node_modules/@faker-js/faker/dist/esm/chunk-GCRDD34F.mjs:12:3381
+      3  100.0%        Script: ~<anonymous> file:///media/mmakenn/Seagate%20Expansion%20Drive/MAC/DEV/CODERHOUSE/4-30935-programaci%C3%B3n-backend/desafios/Desafio-clase32/node_modules/@faker-js/faker/dist/esm/index.mjs:1:1
+      3  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      3  100.0%            /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      3    1.1%      LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/request.js:467:36
+      3  100.0%        LazyCompile: ~send /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:111:25
+      3  100.0%          LazyCompile: ~done /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:1033:27
+      3  100.0%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:251:47
+
+    113    2.0%  /usr/lib/x86_64-linux-gnu/libc.so.6
+     67   59.3%    /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+     16   23.9%      /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      4   25.0%        LazyCompile: *quotedString /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:118:38
+      3   75.0%          Function: ^pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      3  100.0%            Function: ^append /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      1   25.0%          Function: ^quotedString /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:998:38
+      1  100.0%            Function: ^setupParams /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1034:36
+      3   18.8%        LazyCompile: *pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      2   66.7%          Function: ^append /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:394:26
+      2  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1   33.3%          Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2   12.5%        Function: ^FastBuffer node:internal/buffer:958:14
+      2  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1   50.0%            Function: ^createPool node:buffer:151:20
+      1   50.0%            Function: ^allocUnsafeSlow node:buffer:383:50
+      1    6.3%        LazyCompile: *setupHelperArgs /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1104:44
+      1  100.0%          LazyCompile: *invokeAmbiguous /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:699:44
+      1  100.0%            LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1    6.3%        LazyCompile: *parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1  100.0%          Function: ^parseWithoutProcessing /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:33:32
+      1  100.0%            Function: ^parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js:51:15
+      1    6.3%        LazyCompile: *appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    6.3%        LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%          LazyCompile: *step /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1  100.0%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:30:40
+      1    6.3%        Function: ^resolveOptions /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/utils.js:740:24
+      1  100.0%          LazyCompile: ~createIndex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/collection.js:254:16
+      1  100.0%            LazyCompile: ~setAutoRemove /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/connect-mongo/build/main/lib/MongoStore.js:138:18
+      1    6.3%        Function: ^header /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:777:29
+      1  100.0%          Function: ^send /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:111:25
+      1  100.0%            Function: ^done /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:1033:27
+      1    6.3%        Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/helpers/pluralize.js:86:34
+      1  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1  100.0%            LazyCompile: ~pluralize /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/helpers/pluralize.js:82:19
+      2    3.0%      LazyCompile: ~parseOptions /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/connection_string.js:204:22
+      2  100.0%        LazyCompile: ~MongoClient /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/mongo_client.js:60:16
+      2  100.0%          LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/connection.js:793:31
+      2  100.0%            /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      2    3.0%      LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2  100.0%        Function: ^compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%          Function: ^ret /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2  100.0%            Function: ^ExpressHandlebars._renderTemplate /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+      2    3.0%      LazyCompile: *classifySexpr /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:363:40
+      2  100.0%        Function: ^SubExpression /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      2  100.0%          Function: ^MustacheStatement /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      2  100.0%            LazyCompile: *Program /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:113:28
+      2    3.0%      Function: ^createFunctionContext /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:216:56
+      2  100.0%        Function: ^compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      2  100.0%          Function: ^compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%            Function: ^ret /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2    3.0%      Function: ^compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      2  100.0%        Function: ^ret /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      2  100.0%          Function: ^ExpressHandlebars._renderTemplate /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:321:60
+      2  100.0%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    1.5%      LazyCompile: ~write_ node:_http_outgoing:730:16
+      1  100.0%        LazyCompile: ~end node:_http_outgoing:833:45
+      1  100.0%          LazyCompile: ~end /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:250:27
+      1  100.0%            LazyCompile: ~send /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:111:25
+      1    1.5%      LazyCompile: ~wrapmethods /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:394:25
+      1  100.0%        LazyCompile: ~generate /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:363:22
+      1  100.0%          LazyCompile: ~session /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:179:26
+      1  100.0%            Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/layer.js:86:49
+      1    1.5%      LazyCompile: ~scheduleServerCheck /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/sdam/topology.js:638:58
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.5%      LazyCompile: ~resolveBSONOptions /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/bson.js:53:28
+      1  100.0%        LazyCompile: ~Db /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/db.js:81:16
+      1  100.0%          LazyCompile: ~db /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/mongo_client.js:176:7
+      1  100.0%            LazyCompile: ~_setClient /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/connection.js:848:20
+      1    1.5%      LazyCompile: ~render /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/application.js:548:29
+      1  100.0%        Function: ^render /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/response.js:1016:29
+      1  100.0%          Function: ^<anonymous> file:///media/mmakenn/Seagate%20Expansion%20Drive/MAC/DEV/CODERHOUSE/4-30935-programaci%C3%B3n-backend/desafios/Desafio-clase32/src/router/info.js:7:29
+      1  100.0%            Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/layer.js:86:49
+      1    1.5%      LazyCompile: ~realpathSync node:fs:2425:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    1.5%      LazyCompile: ~pushSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:881:34
+      1  100.0%        LazyCompile: ~appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: ~compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: ~compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1    1.5%      LazyCompile: ~parseurl /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/parseurl/index.js:35:19
+      1  100.0%        LazyCompile: ~getPathname /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:537:21
+      1  100.0%          LazyCompile: ~next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            LazyCompile: ~handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:136:31
+      1    1.5%      LazyCompile: ~onMessage /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/cmap/connection.js:159:14
+      1  100.0%        Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1  100.0%          Function: ^emit node:events:475:44
+      1  100.0%            LazyCompile: ~processIncomingData /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    1.5%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%        LazyCompile: ~resume /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_readable.js:902:16
+      1  100.0%          LazyCompile: ~Readable.resume /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_readable.js:886:38
+      1  100.0%            LazyCompile: ~Readable.on /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_readable.js:804:34
+      1    1.5%      LazyCompile: ~handleWriteReq node:internal/stream_base_commons:45:24
+      1  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+      1  100.0%          Function: ^Socket._writeGeneric node:net:791:42
+      1  100.0%            Function: ^Socket._write node:net:828:35
+      1    1.5%      LazyCompile: ~handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:280:64
+      1  100.0%          LazyCompile: ~process_params /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:338:47
+      1  100.0%            LazyCompile: ~next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+      1    1.5%      LazyCompile: ~fastparse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/parseurl/index.js:95:20
+      1  100.0%        LazyCompile: ~parseurl /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/parseurl/index.js:35:19
+      1  100.0%          LazyCompile: ~getPathname /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:537:21
+      1  100.0%            LazyCompile: ~next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+      1    1.5%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%        LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:125:19
+      1  100.0%          Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/@colors/colors/lib/system/supports-colors.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    1.5%      LazyCompile: ~connectionListener node:_http_server:442:28
+      1  100.0%        Function: ^emit node:events:475:44
+      1  100.0%          LazyCompile: ~onconnection node:net:1587:22
+      1    1.5%      LazyCompile: ~classifySexpr /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:363:40
+      1  100.0%        LazyCompile: ~SubExpression /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:236:40
+      1  100.0%          LazyCompile: ~MustacheStatement /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:215:48
+      1  100.0%            LazyCompile: ~accept /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:101:26
+      1    1.5%      LazyCompile: ~buildDevLogger file:///media/mmakenn/Seagate%20Expansion%20Drive/MAC/DEV/CODERHOUSE/4-30935-programaci%C3%B3n-backend/desafios/Desafio-clase32/src/components/logger.js:15:24
+      1  100.0%        Script: ~<anonymous> file:///media/mmakenn/Seagate%20Expansion%20Drive/MAC/DEV/CODERHOUSE/4-30935-programaci%C3%B3n-backend/desafios/Desafio-clase32/src/components/logger.js:1:1
+      1  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1  100.0%            /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1    1.5%      LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%        LazyCompile: ~Socket node:net:285:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1    1.5%      LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%        LazyCompile: ~maybePromise /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/utils.js:398:22
+      1  100.0%          LazyCompile: ~executeOperation /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1  100.0%            LazyCompile: ~createCollection /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongodb/lib/db.js:153:21
+      1    1.5%      LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:30:40
+      1  100.0%        LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:20:46
+      1  100.0%          /home/mmakenn/.nvm/versions/node/v16.15.1/bin/node
+      1  100.0%            LazyCompile: ~__awaiter /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:18:54
+      1    1.5%      LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1  100.0%        LazyCompile: ~step /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:31:18
+      1  100.0%          LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:30:40
+      1  100.0%            LazyCompile: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:20:46
+      1    1.5%      LazyCompile: *emit node:events:475:44
+      1  100.0%        Function: ^endReadableNT node:internal/streams/readable:1338:23
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.5%      LazyCompile: *each /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js:91:22
+      1  100.0%        Function: ^mergeSource /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:267:36
+      1  100.0%          LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    1.5%      LazyCompile: *aliasable /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:1006:32
+      1  100.0%        Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-handlebars/dist/express-handlebars.js:227:47
+      1    1.5%      LazyCompile: *FastBuffer node:internal/buffer:958:14
+      1  100.0%        Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%          Function: ^allocUnsafeSlow node:buffer:383:50
+      1  100.0%            Function: ^readFileAfterStat node:fs:326:27
+      1    1.5%      Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/send/node_modules/debug/src/node.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.5%      Function: ~<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.5%      Function: ^setRequestTimeout node:_http_server:767:27
+      1    1.5%      Function: ^ownProp /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/common.js:9:18
+      1  100.0%        Function: ^Glob._readdir /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:525:36
+      1  100.0%          Function: ^Glob._processGlobStar /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:623:44
+      1  100.0%            Function: ^Glob._process /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:295:36
+      1    1.5%      Function: ^onwrite /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_writable.js:444:17
+      1  100.0%        Function: ^WritableState.onwrite /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/readable-stream/lib/_stream_writable.js:159:27
+      1  100.0%          Function: ^log /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/winston/lib/winston/transports/console.js:44:6
+      1  100.0%            Function: ^_write /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/winston-transport/index.js:69:51
+      1    1.5%      Function: ^next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:478:32
+      1  100.0%        Function: ^lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:525:30
+      1  100.0%          Function: ^lex /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:295:25
+      1  100.0%            Function: ^parse /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:269:30
+      1    1.5%      Function: ^next /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:177:16
+      1  100.0%        Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:136:31
+      1  100.0%          Function: ^router /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/index.js:46:18
+      1  100.0%            Function: ^handle /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/router/layer.js:86:49
+      1    1.5%      Function: ^inflight /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/inflight/inflight.js:7:19
+      1  100.0%        Function: ^wrapper /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/wrappy/wrappy.js:19:19
+      1  100.0%          Function: ^Glob._readdir /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:525:36
+      1  100.0%            Function: ^Glob._processGlobStar /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/glob/glob.js:623:44
+      1    1.5%      Function: ^hash /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:596:14
+      1  100.0%        Function: ^isModified /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:425:24
+      1  100.0%          Function: ^shouldSetCookie /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:464:29
+      1  100.0%            Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express-session/index.js:220:28
+      1    1.5%      Function: ^handleErrorFromBinding node:internal/fs/utils:341:32
+      1  100.0%        Function: ^statSync node:fs:1543:18
+      1  100.0%          Function: ^tryStat /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/view.js:174:17
+      1  100.0%            Function: ^resolve /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/express/lib/view.js:146:42
+      1    1.5%      Function: ^clearIncoming node:_http_server:754:23
+      1  100.0%        Function: ^resOnFinish node:_http_server:793:21
+      1  100.0%          LazyCompile: *emit node:events:475:44
+      1  100.0%            Function: ^onFinish node:_http_outgoing:828:18
+      1    1.5%      Function: ^appendEscaped /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:416:40
+      1  100.0%        LazyCompile: *compile /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:73:28
+      1  100.0%          Function: ^compileInput /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:507:24
+      1  100.0%            Function: ^ret /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:515:15
+      1    1.5%      Function: ^Module._resolveLookupPaths node:internal/modules/cjs/loader:667:38
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    1.5%      Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    1.5%      Function: ^<anonymous> node:internal/url:684:12
+      1  100.0%        Function: ^toString node:internal/url:732:11
+      1  100.0%          Function: ^URL node:internal/url:621:14
+      1  100.0%            Function: ^URL node:internal/url:621:14
+      1    1.5%      Function: ^<anonymous> /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:505:34
+      1  100.0%        Function: ^replaceStack /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:892:38
+      1  100.0%          Function: ^resolvePath /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:492:36
+      1  100.0%            Function: ^lookupOnContext /media/mmakenn/Seagate Expansion Drive/MAC/DEV/CODERHOUSE/4-30935-programación-backend/desafios/Desafio-clase32/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:448:44
+
+     60    1.1%  epoll_pwait@@GLIBC_2.6
+
+     57    1.0%  syscall@@GLIBC_2.2.5
+     57  100.0%    LazyCompile: *realpathSync node:fs:2425:22
+     57  100.0%      Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+     54   94.7%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+     46   85.2%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+     41   89.1%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      5   10.9%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      7   13.0%          Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      7  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1    1.9%          LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:939:31
+      1  100.0%            Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      3    5.3%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+

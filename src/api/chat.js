@@ -1,3 +1,4 @@
+import logger from '../components/logger.js'
 import { ChatContainer } from '../containers/chatContainer.js';
 
 const chat = new ChatContainer();
@@ -7,7 +8,7 @@ export function emitChat(socket, io) {
         .then(messages => socket.emit('showChat', messages));
 
     socket.on('updateChat', message => {
-        console.log("El Servidor recibió un nuevo mensaje.")
+        logger.info("El Servidor recibió un nuevo mensaje.")
         chat.save(message)
             .then(() => {
                 chat.getAll()
