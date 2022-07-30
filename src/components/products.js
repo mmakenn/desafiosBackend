@@ -1,4 +1,4 @@
-import logger from '../components/logger.js'
+import logger from './logger.js'
 import { ProductsContainer } from '../database/productsContainer.js';
 
 const products = new ProductsContainer()

@@ -1,18 +1,15 @@
-import compression from 'compression'
-import logger from '../components/logger.js';
-import { infoProcess } from '../../options.js';
 import { Router } from 'express';
 const infoRouter = new Router();
+import compression from 'compression'
+import { showProcessInfo } from '../controllers/info.js';
 
-infoRouter.get('/api/info', (req, res) => {
-    logger.info(`Request to URL: ${req.url} with method: ${req.method}`)
-    // console.log(infoProcess)
-    res.render('info', infoProcess)
-})
+infoRouter.get('/api/info', 
+    showProcessInfo
+)
 
-infoRouter.get('/api/info-comp', compression(), (req, res) => {
-    logger.info(`Request to URL: ${req.url} with method: ${req.method}`)
-    res.render('info', infoProcess)
-})
+infoRouter.get('/api/info-comp', 
+    compression,
+    showProcessInfo
+)
 
 export { infoRouter }
