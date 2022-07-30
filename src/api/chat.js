@@ -1,5 +1,5 @@
 import logger from '../components/logger.js'
-import { ChatContainer } from '../containers/chatContainer.js';
+import { ChatContainer } from '../database/chatContainer.js';
 
 const chat = new ChatContainer();
 

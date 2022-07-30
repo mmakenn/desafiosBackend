@@ -5,7 +5,7 @@ import { mongoDB } from '../../options.js';
 
 import passport from 'passport'
 import { Strategy } from 'passport-local'
-import { UsersContainer } from '../containers/usersContainer.js';
+import { UsersContainer } from '../database/usersContainer.js';
 
 
 export function setPassport(app) {
