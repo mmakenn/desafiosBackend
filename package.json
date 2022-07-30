@@ -1,14 +1,14 @@
 {
-  "name": "desafio-clase32",
+  "name": "desafio-clase38",
   "type": "module",
   "version": "1.0.0",
   "main": "src/main.js",
   "scripts": {
-    "start": "MONGO_USER=mmakenn MONGO_PASSWORD=coderhouse MONGO_DATABASE=desafioclase30 node src/main.js",
-    "start:fork": "MONGO_USER=mmakenn MONGO_PASSWORD=coderhouse MONGO_DATABASE=desafioclase30 node src/main.js",
-    "start:cluster": "MONGO_USER=mmakenn MONGO_PASSWORD=coderhouse MONGO_DATABASE=desafioclase30 node src/main.js server_mode=cluster",
-    "start:dev": "MONGO_USER=mmakenn MONGO_PASSWORD=coderhouse MONGO_DATABASE=desafioclase30 nodemon src/main.js",
-    "start:devCluster": "MONGO_USER=mmakenn MONGO_PASSWORD=coderhouse MONGO_DATABASE=desafioclase30 nodemon src/main.js server_mode=cluster"
+    "start": "node src/main.js",
+    "start:fork": "node src/main.js",
+    "start:cluster": "node src/main.js server_mode=cluster",
+    "start:dev": "nodemon src/main.js",
+    "start:devCluster": "nodemon src/main.js server_mode=cluster"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
     "express-session": "^1.17.3",
     "minimist": "^1.2.6",
     "mongoose": "^6.3.5",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.19",
     "normalizr": "^3.6.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
