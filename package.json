@@ -8,7 +8,8 @@
     "start:fork": "node src/main.js",
     "start:cluster": "node src/main.js server_mode=cluster",
     "start:dev": "nodemon src/main.js",
-    "start:devCluster": "nodemon src/main.js server_mode=cluster"
+    "start:devCluster": "nodemon src/main.js server_mode=cluster",
+    "start:profiler": "node --prof src/main.js"
   },
   "keywords": [],
   "author": "",

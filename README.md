@@ -30,7 +30,7 @@
 ## Testing performance with Artillery @ Fork Mode:
 #   1) Start server with node profiler:
     Command:
-        MONGO_USER=mmakenn MONGO_PASSWORD=coderhouse MONGO_DATABASE=desafioclase30 node --prof src/main.js 
+        npm run start:profiler 
 #   2) Start test:
     Using 50 conections of 20 request for each one.
 #   Endpoint /api/info adding a console.log() in code to show status of response. Save result @ result_info_with.txt

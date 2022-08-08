@@ -1,4 +1,9 @@
+/* ---> ENVIROMENT <--- */
 import 'dotenv/config'
+
+export const PORT = process.env.PORT ?? 8080
+
+export const persistance = process.env.PERS ? process.env.PERS.trim() : process.env.PERS; 
 
 export const mongoDB = {
     urlServer: `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.6zovj.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`,
@@ -11,8 +16,12 @@ export const mongoDB = {
     }
 }
 
-export const PORT = process.env.PORT ?? 8080
+export const localFile = {
+    path_products: './src/datasource/local/products.txt',
+    path_carts: './src/datasource/local/carts.txt'
+}
 
+/* ---> PROCESS <--- */
 import os from 'os'
 
 export const infoProcess = {
@@ -26,8 +35,7 @@ export const infoProcess = {
     folder: process.execPath.split('/').pop()
 }
 
-
-/* Argv(s) */
+/* ---> Argv(s) <--- */
 import parseArgs from 'minimist'
 
-export const SERVER_MODE = parseArgs(process.argv).server_mode ?? 'fork'
+export const server_mode = parseArgs(process.argv).server_mode ?? 'fork'
