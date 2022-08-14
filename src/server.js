@@ -15,6 +15,7 @@ import { routerUser } from './routers/routerUser.js'
 /* Logger */
 import logger from './components/logger.js';
 import { auth } from './middleware/authUser.js';
+import { GraphQLController } from './controllers/products.js';
 
 export function createServer(port) {
     const app = express()
@@ -30,7 +31,7 @@ export function createServer(port) {
     
     app.use(routerUser)
     app.use('/api/carrito', auth, routerCart)
-    app.use('/api/productos', auth, routerShop)
+    app.use('/api/productos', auth, new GraphQLController())
 
     app.get('*', (req, res) => {
         logger.warn(`Request to URL: ${req.url} with method: ${req.method} is not implemented`)
