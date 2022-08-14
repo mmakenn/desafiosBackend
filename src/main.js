@@ -1,9 +1,9 @@
-import { server_mode, port } from "../options.js";
+import { SERVER_MODE, PORT } from "../config.js";
 import { createCluster } from "./cluster.js";
 import { createServer } from "./server.js";
 
-if (server_mode === 'cluster') {
-    createCluster(port)
+if (SERVER_MODE === 'cluster') {
+    createCluster(PORT)
 } else {
-    createServer(port)
+    createServer(PORT)
 }
