@@ -1,5 +1,5 @@
 import logger from '../components/logger.js';
-import persistance from '../../options.js';
+import { persistance } from '../../options.js';
 
 let productsModule;
 let productsList;

@@ -1,7 +1,7 @@
 /* ---> ENVIROMENT <--- */
 import 'dotenv/config'
 
-export const PORT = process.env.PORT ?? 8080
+export const port = process.env.PORT ?? 8080
 
 export const persistance = process.env.PERS ? process.env.PERS.trim() : process.env.PERS; 
 

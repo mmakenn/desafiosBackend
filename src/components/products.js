@@ -1,7 +1,5 @@
 import logger from './logger.js'
-import { ProductsContainer } from '../database/productsContainer.js';
-
-const products = new ProductsContainer()
+import { productsList as products } from '../DAOs/factoryDAO.js';
 
 export function emitProducts(socket, io) {
     products.getAll()

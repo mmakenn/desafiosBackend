@@ -1,7 +1,5 @@
 import logger from './logger.js'
-import { ChatContainer } from '../database/chatContainer.js';
-
-const chat = new ChatContainer();
+import { chat } from '../DAOs/factoryDAO.js';
 
 export function emitChat(socket, io) {
     chat.getAll()

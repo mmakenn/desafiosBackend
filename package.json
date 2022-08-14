@@ -9,13 +9,16 @@
     "start:cluster": "node src/main.js server_mode=cluster",
     "start:dev": "nodemon src/main.js",
     "start:devCluster": "nodemon src/main.js server_mode=cluster",
-    "start:profiler": "node --prof src/main.js"
+    "start:profiler": "node --prof src/main.js",
+    "test": "mocha test/products.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^7.1.0",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
     "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
@@ -32,5 +35,8 @@
     "socket.io": "^4.5.1",
     "winston": "^3.8.1"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
 }

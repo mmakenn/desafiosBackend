@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { ContainerMongo } from "./containerMongo.js";
-import logger from "../components/logger.js";
+import { ContainerMongo } from "../../datasource/containerMongo.js";
+import logger from "../../components/logger.js";
 
 /* Normalizacion de los mensajes para ser almacenados en la base de datos. */
 import { normalize, schema, denormalize } from "normalizr";

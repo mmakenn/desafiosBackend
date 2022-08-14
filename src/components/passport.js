@@ -5,7 +5,7 @@ import { mongoDB } from '../../options.js';
 
 import passport from 'passport'
 import { Strategy } from 'passport-local'
-import { UsersContainer } from '../database/usersContainer.js';
+import { users } from '../DAOs/factoryDAO.js';
 
 
 export function setPassport(app) {
@@ -22,8 +22,6 @@ export function setPassport(app) {
             maxAge: 40000
         }
     }))
-
-    const users = new UsersContainer()
     
     passport.use('register', new Strategy(
         { passReqToCallback: true }, 
